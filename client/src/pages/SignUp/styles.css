@@ -1,0 +1,62 @@
+.signup-container {
+    margin-top: 30%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f1f1f1;
+	flex-direction: column;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width:100%;
+}
+.signup{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-container .signup-input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.ordesign{
+    margin:0;
+}
+
+.signup-container .signup-title{
+    margin: 0;
+    margin-bottom: 20px;
+    color: #1199FF;
+
+}
+
+.signup-container .btn{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #1199FF;
+    /* background-color: #4CAF50; */
+    color: #1199FF;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+}
+
+.signup-container .btn:hover{
+    background-color: #D9D9D9;
+    /* color: white; */
+}
+
+.signup-icon{
+    font-size: 20px;
+}
+
