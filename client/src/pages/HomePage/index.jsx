@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
-	return <div>HomePage</div>;
+	return <div>HomePage
+	<Link to='/signup'>SignUp</Link></div>;
 };
 
 export default HomePage;

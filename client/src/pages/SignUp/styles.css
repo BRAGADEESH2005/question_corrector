@@ -6,7 +6,7 @@
 	background-color: #f1f1f1;
 	flex-direction: column;
     border-radius: 10px;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width:100%;
 }
@@ -14,6 +14,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    width:20%;
 }
 
 .signup-container .signup-input{
@@ -28,7 +29,7 @@
     margin:0;
 }
 
-.signup-container .signup-title{
+.signup-container .signup-title,.popup .signup-title{
     margin: 0;
     margin-bottom: 20px;
     color: #1199FF;
@@ -46,7 +47,7 @@
     font-weight: bold;
     cursor: pointer;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     text-decoration: none;
 }
@@ -58,5 +59,41 @@
 
 .signup-icon{
     font-size: 20px;
+    margin-right: 10px;
 }
 
+
+/* profile Details */
+.select-input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.popup{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    position: fixed;
+    width: 30%;
+    height: 30%;
+    overflow: auto;
+    border-radius: 10px;
+    flex-direction: column;
+    background-color:#D9D9D9;
+}
+
+.popup .select-input{
+    width:70%;
+}
+
+ .popup .btn{
+    width:30%;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+ }

@@ -1,0 +1,128 @@
+.dashboard-container {
+	margin-left: 13%;
+	/* margin-top:10%; */
+	width: 80%;
+	height: 75vh;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.left-dashboard {
+	flex: 2;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.right-dashboard {
+	flex: 1;
+	margin-left: 5%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.mentor {
+	width: 100%;
+	margin-top: 3%;
+	border-radius: 10px;
+	padding: 3px;
+	background-color: #f9f9f9;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-intro {
+	width: 100%;
+	border-radius: 10px;
+	padding: 1%;
+	background-color: #f9f9f9;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-papers {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #f9f9f9;
+	border-radius: 10px;
+	padding: 0 5px;
+	margin-top: 2%;
+}
+
+.dashboard-analysis {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex: 1;
+}
+
+.analysis {
+	width: 40%;
+	border-radius: 10px;
+	padding: 1%;
+	background-color: #f9f9f9;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-performance {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #f9f9f9;
+	border-radius: 10px;
+	padding: 0 5px;
+	margin-top: 2%;
+	flex: 2;
+}
+
+.dashboard-contact {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #f9f9f9;
+	border-radius: 10px;
+	padding: 0 5px;
+	margin-top: 2%;
+	flex: 1;
+}
+
+@media (max-width: 768px) {
+	.dashboard-container {
+		margin-left: 0;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.left-dashboard {
+		width: 80%;
+	}
+
+	.right-dashboard {
+		margin-top: 10%;
+		margin-left: 0;
+		width: 100%;
+		background-color: #f1f1f1;
+	}
+	.dashboard-analysis {
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	.dashboard-performance {
+		width: 80%;
+		margin-left: 10%;
+	}
+
+	.dashboard-contact {
+		width: 80%;
+		margin-left: 10%;
+	}
+}
