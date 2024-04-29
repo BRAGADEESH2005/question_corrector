@@ -1,0 +1,6 @@
+server/__pycache__/
+authentication/__pycache__/
+evaluation/__pycache__/
+evaluators_qpuploaders/__pycache__/
+students_mentors/__pycache__/
+subscriptions/__pycache__/
