@@ -4,3 +4,9 @@ evaluation/__pycache__/
 evaluators_qpuploaders/__pycache__/
 students_mentors/__pycache__/
 subscriptions/__pycache__/
+server/migrations/__pycache__/
+authentication/migrations/__pycache__/
+evaluation/migrations/__pycache__/
+evaluators_qpuploaders/migrations/__pycache__/
+students_mentors/migrations/__pycache__/
+subscriptions/migrations/__pycache__/
