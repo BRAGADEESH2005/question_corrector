@@ -1,62 +1,107 @@
 .signup-container {
-    margin-top: 30%;
+	margin-top: 10%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: #f1f1f1;
 	flex-direction: column;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width:100%;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 100%;
 }
-.signup{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.signup-container .signup-input{
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.signup {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
 }
 
-.ordesign{
-    margin:0;
+.signup-container .signup-input {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 5px;
+	border: 1px solid #ccc;
 }
 
-.signup-container .signup-title{
-    margin: 0;
-    margin-bottom: 20px;
-    color: #1199FF;
-
+.ordesign {
+	margin: 0;
 }
 
-.signup-container .btn{
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #1199FF;
-    /* background-color: #4CAF50; */
-    color: #1199FF;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-decoration: none;
+.signup-container .signup-title,
+.popup .signup-title {
+	margin: 0;
+	margin-bottom: 20px;
+	color: #1199ff;
 }
 
-.signup-container .btn:hover{
-    background-color: #D9D9D9;
-    /* color: white; */
+.signup-container .btn {
+	width: 60%;
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 5px;
+	border: 1px solid #1199ff;
+	/* background-color: #4CAF50; */
+	color: #1199ff;
+	font-weight: bold;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
 }
 
-.signup-icon{
-    font-size: 20px;
+.signup-container .btn:hover {
+	background-color: #d9d9d9;
+	/* color: white; */
 }
 
+.signup-icon {
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+/* profile Details */
+.select-input {
+	width: 100%;
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+.popup {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+	position: fixed;
+	width: 30%;
+	height: 30%;
+	overflow: auto;
+	border-radius: 10px;
+	flex-direction: column;
+	background-color: #d9d9d9;
+}
+
+.popup .select-input {
+	width: 70%;
+}
+
+.popup .btn {
+	width: 30%;
+	margin-top: 10px;
+	padding: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+	.signup {
+		width: 90%;
+	}
+    .signup-container .btn{
+        width:80%;
+    }
+}

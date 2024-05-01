@@ -1,6 +1,9 @@
 import ProfileDetails from "./pages/ProfileDetails";
 import SignUp from "./pages/SignUp";
 import HomePage from "./pages/HomePage";
+import Dashboard from "./pages/Dashboard";
+import QuestionPaper from "./pages/QuestionPaper";
+import AnswerUpload from "./pages/AnswerUpload";
 
 export const mainRoutes = [
 	{
@@ -14,8 +17,23 @@ export const mainRoutes = [
 		exact: true,
 	},
 	{
-		path: "/profileDetails",
+		path: "/profileDetails/:category",
 		component: ProfileDetails,
+		exact: true,
+	},
+	{
+		path: "/dashboard",
+		component: Dashboard,
+		exact: true,
+	},
+	{
+		path: "/questionPaper",
+		component: QuestionPaper,
+		exact: true,
+	},
+	{
+		path: "/answerUpload",
+		component: AnswerUpload,
 		exact: true,
 	},
 ];
