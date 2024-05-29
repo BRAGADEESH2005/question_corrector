@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import Dashboard from "./pages/Dashboard";
 import QuestionPaper from "./pages/QuestionPaper";
 import AnswerUpload from "./pages/AnswerUpload";
+import ContactUs from "./pages/ContactUs";
 
 export const mainRoutes = [
 	{
@@ -36,4 +37,9 @@ export const mainRoutes = [
 		component: AnswerUpload,
 		exact: true,
 	},
+	{
+		path:"/contactUs",
+		component: ContactUs,
+		exact: true,
+	}
 ];

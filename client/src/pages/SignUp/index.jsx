@@ -3,13 +3,11 @@ import "./styles.css";
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-// import { Link } from "react-router-dom";
 
 const SignUp = () => {
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
-	const [openPopup, setOpenPopup] = useState(false);
 	const [category, setCategory] = useState("");
 	const navigate = useNavigate();
 
@@ -21,7 +19,8 @@ const SignUp = () => {
 		if (
 			email.trim() === "" ||
 			password.trim() === "" ||
-			confirmPassword.trim() === ""
+			confirmPassword.trim() === "" ||
+			category.trim() === ""
 		) {
 			alert("Please fill in all fields.");
 			return;
@@ -32,31 +31,33 @@ const SignUp = () => {
 		}
 		// If all fields are filled, continue
 		// You can redirect or perform any other action here
-		// For now, just logging the form data
-		// TODO:Backend Integration
-		console.log("Form submitted:", { email, password });
-		setOpenPopup(true);
-	};
-
-	const handlePopUpSubmit = () => {
-		if (category === "") {
-			alert("Please select a category");
-			return;
-		}
-		if (category === "Student") {
-			navigate("/profileDetails/Student");
-		} else if (category === "Mentor") {
-			navigate("/profileDetails/Mentor");
-		} else if(category === "Evaluator") {
-			navigate("/profileDetails/Evaluator");
-		}
-		console.log("Category selected:", category);
+		// For now, just logging the form data and selected category
+		// TODO: Backend Integration
+		console.log("Form submitted:", { email, password, category });
+		navigate(`/profileDetails/${category}`);
 	};
 
 	return (
 		<div className="signup">
 			<form className="signup-container" onSubmit={handleSubmit}>
 				<h3 className="signup-title">Sign Up</h3>
+        <hr className="row" />
+				<div className="category-header">Choose Your Role</div>
+				<div className="category-options">
+					{categoryOptions.map((option) => (
+						<label key={option} className="category-label">
+							<input
+								type="radio"
+								value={option}
+								checked={category === option}
+								onChange={(e) => setCategory(e.target.value)}
+								required
+							/>
+							{option}
+						</label>
+					))}
+				</div>
+          <hr className="row" />
 				<input
 					className="signup-input"
 					type="email"
@@ -97,29 +98,6 @@ const SignUp = () => {
 					Continue with Facebook
 				</button>
 			</form>
-			{openPopup && (
-				<div className="popup">
-					<h2 className="signup-title">Choose Your Roll</h2>
-					<select
-						className="select-input"
-						value={category}
-						onChange={(e) => setCategory(e.target.value)}
-					>
-						<option className="select-input" value="">
-							Select Class
-						</option>
-						{categoryOptions.map((option) => (
-							<option className="select-input" key={option} value={option}>
-								{option}
-							</option>
-						))}
-					</select>
-					<button className="btn" onClick={() => setOpenPopup(false)}>
-						Close
-					</button>
-					<button onClick={handlePopUpSubmit} className="btn">Submit</button>
-				</div>
-			)}
 		</div>
 	);
 };

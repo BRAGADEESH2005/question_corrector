@@ -28,11 +28,11 @@
 	width: 100%;
 	margin-top: -2.5%;
 	border-radius: 10px;
-	background-color: #c7bdbd;
+	background-color: #d7d1d1;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 	display: flex;
 	justify-content: space-around;
-	color: #363638;
+	color: #232325;
 }
 
 .user-intro {

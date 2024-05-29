@@ -97,6 +97,24 @@
 	cursor: pointer;
 }
 
+.category-label{
+width: 100%;
+}
+
+.category-header{
+	font-size: larger;
+	margin-bottom: 2%;
+}
+.category-options{
+	margin-bottom: 3%;
+}
+
+.row{
+	color:black;
+	width: 80%;
+	margin-top: 0;
+}
+
 @media (max-width: 768px) {
 	.signup {
 		width: 90%;

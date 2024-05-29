@@ -31,7 +31,7 @@ const SidePanel = () => {
 					<FaHandsHelping className="icon" />
 					Help Center
 				</Link>
-				<Link className="side-anchor">
+				<Link className="side-anchor" to={"/contactUs"}>
 					<IoMdMail className="icon" />
 					Contact Us
 				</Link>
