@@ -1,6 +1,7 @@
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST, require_GET
-from .models import Mentor, Student, Recommended_QPs, Subscriptions
+from .models import Mentor, Student, Recommended_QPs
+from subscriptions.models import Subscriptions
 from pydantic import BaseModel
 from typing import List
 
