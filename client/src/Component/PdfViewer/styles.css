@@ -1,0 +1,26 @@
+.pdf-holder {
+	/* padding-top: 10%; */
+  margin-left: 2%;
+	max-height: 75vh;
+  z-index: -1;
+}
+
+.view-pdf{
+  margin-top: 5%;
+}
+
+canvas.react-pdf__Page__canvas {
+	max-height: 85vh;
+  /* max-width: 50v; */
+}
+.pdf-container {
+	width: 100%; /* Adjust width as needed */
+	height: 100%; /* Adjust height as needed */
+	overflow: auto; /* Enable scrolling */
+}
+
+
+.pdf-scrollable {
+	width: 100%; /* Take full width of the container */
+	height: 100%; /* Take full height of the container */
+}

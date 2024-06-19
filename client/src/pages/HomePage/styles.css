@@ -1,0 +1,37 @@
+.homepage-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 3%;
+    border-radius: 10px;
+    
+}
+
+.homepage-content {
+    text-align: center;
+}
+
+.homepage-content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.homepage-content p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.get-started-btn {
+    padding: 10px 30px;
+    background-color: #1199FF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    color: #fff;
+}
+
+.get-started-btn:hover {
+    background-color: #0056b3;
+}
