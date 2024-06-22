@@ -12,13 +12,13 @@ const SidePanel = () => {
 	return (
 		<div className="side-panel">
 			<div className="top-panel">
-				<Link className="side-anchor">
+				<Link className="side-anchor" to={"/dashboard"}>
 					<MdDashboard className="icon" /> Dashboard
 				</Link>
-				<Link className="side-anchor">
+				<Link className="side-anchor" to="/questionPaper">
 					<MdQuestionAnswer className="icon" /> Question Paper
 				</Link>
-				<Link className="side-anchor">
+				<Link className="side-anchor" to={"/answerUpload"}>
 					<IoMdCloudUpload className="icon" /> Upload Answer
 				</Link>
 				<Link className="side-anchor">
@@ -31,7 +31,7 @@ const SidePanel = () => {
 					<FaHandsHelping className="icon" />
 					Help Center
 				</Link>
-				<Link className="side-anchor"> 
+				<Link className="side-anchor" to={"/contactUs"}>
 					<IoMdMail className="icon" />
 					Contact Us
 				</Link>

@@ -1,11 +1,9 @@
 from django.urls import path
-from .views import StudentListCreate, StudentRetrieveUpdateDestroy, MentorListCreate, MentorRetrieveUpdateDestroy, RecommendedQPsListCreate, RecommendedQPsRetrieveUpdateDestroy
+from . import views
 
 urlpatterns = [
-    path('students/', StudentListCreate.as_view(), name='student_list_create'),
-    path('students/<int:pk>/', StudentRetrieveUpdateDestroy.as_view(), name='student_retrieve_update_destroy'),
-    path('mentors/', MentorListCreate.as_view(), name='mentor_list_create'),
-    path('mentors/<int:pk>/', MentorRetrieveUpdateDestroy.as_view(), name='mentor_retrieve_update_destroy'),
-    path('recommended_qps/', RecommendedQPsListCreate.as_view(), name='recommended_qps_list_create'),
-    path('recommended_qps/<int:pk>/', RecommendedQPsRetrieveUpdateDestroy.as_view(), name='recommended_qps_retrieve_update_destroy'),
+    path('create_mentor/', views.create_mentor, name='create_mentor'),
+    path('create_student/', views.create_student, name='create_student'),
+    path('recommend_qp/', views.recommend_qp, name='recommend_qp'),
+    path('subscribe_student/', views.subscribe_student, name='subscribe_student'),
 ]
