@@ -4,13 +4,18 @@ from __future__ import unicode_literals
 from django.db import models
 
 from authentication.models import User
+from django.core.exceptions import ValidationError
+
+def validate_pdf(file):
+    if not file.name.endswith('.pdf'):
+        raise ValidationError("Only PDF files are allowed.")
 
 # Create your models here.
 class QP_Uploader(models.Model):
     UserID = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
 
 class Evaluator(models.Model):
-    UserID = models.ForeignKey(User, on_delete=models.CASCADE, primary_key=True)
+    UserID = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     Rating = models.IntegerField()
 
 class Eval_Languages(models.Model):
@@ -34,6 +39,8 @@ class Question_Papers(models.Model):
     QP_Language = models.CharField(max_length=10)
     QP_Board = models.CharField(max_length=10)
     QP_Grade = models.IntegerField()
+    QP_File = models.FileField(upload_to='question_papers',validators=[validate_pdf])
+
 
 class QP_Structure(models.Model):
     QP_ID = models.ForeignKey(Question_Papers,on_delete=models.CASCADE)
